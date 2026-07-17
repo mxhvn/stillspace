@@ -1,0 +1,24 @@
+/* Minimal interface: only a temporary start button remains before the engine starts. */
+#ct-start{
+  position:fixed;
+  z-index:11000;
+  left:50%;
+  bottom:36px;
+  transform:translateX(-50%);
+  padding:12px 18px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  background:rgba(8,16,20,.86);
+  color:#fff;
+  font:700 12px Jura,Arial,sans-serif;
+  letter-spacing:.12em;
+  cursor:pointer;
+  box-shadow:0 10px 26px rgba(0,0,0,.28);
+  backdrop-filter:blur(8px)
+}
+body.ct-running #ct-start{display:none}
+#game-error{z-index:20000!important}
+/* Hide the archived engine's configuration entry to keep the experience simple. */
+#menu-bar-right [data-tip*="config" i],
+#menu-bar-right [title*="config" i],
+#menu-bar-right [aria-label*="settings" i]{display:none!important}
